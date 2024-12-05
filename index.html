@@ -4,29 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/styles/style.css" />
-    <title>Reworn</title>
+    <title>ReWorn</title>
   </head>
   <body>
-    <!-- HERO SECTION  -->
-    <section class="hero-section">
-      <div class="hero-content">
-        <div class="hero-action">
-          <h1>Share the Warmth, Get Free Clothes Today!</h1>
-          <p>Introducing our latest collection of products</p>
+    <header class="header">
+      <div class="logo">ReWorn</div>
+      <div class="search-bar">
+        <img src="./src/assets/icons/searchIcon.svg" alt="Search Icon" />
+        <input type="text" placeholder="Search for an Item..." />
+      </div>
+      <ul class="navbar">
+        <li class="nav-link">
+          <a href="#">Products</a>
+        </li>
+        <li class="nav-link">
+          <a href="#">Account</a>
+        </li>
+        <li class="nav-link">
+          <a href="#">Wish List</a>
+        </li>
+        <li class="nav-link">
+          <a href="#" class="basket">
+            <span>Basket</span>
+            <img
+              src="./src/assets/icons/basket.svg"
+              class="basket-icon"
+              alt="Basket Icon"
+            />
+          </a>
+        </li>
+      </ul>
+    </header>
+    <main>
+      <!-- HERO SECTION  -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <div class="hero-action">
+            <h1>Share the Warmth, Get Free Clothes Today!</h1>
+            <p>Introducing our latest collection of products</p>
 
-          <button class="hero-btn learn-more">
-            <span class="circle" aria-hidden="true">
-              <span class="icon arrow"></span>
-            </span>
-            <span class="button-text">Get Free Clothes</span>
-          </button>
+            <button class="hero-btn learn-more">
+              <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+              </span>
+              <span class="button-text">Get Free Clothes</span>
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="hero-image">
-        <div class="circle"></div>
-        <img src="./src/assets/images/model.svg" alt="Fashion model" />
-      </div>
-    </section>
-    <!-- HERO SECTION - END -->
+        <div class="hero-image">
+          <div class="circle"></div>
+          <img src="./src/assets/images/model.svg" alt="Fashion model" />
+        </div>
+      </section>
+      <!-- HERO SECTION - END -->
+    </main>
   </body>
 </html>

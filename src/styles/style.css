@@ -1,14 +1,110 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Seymour+One&display=swap");
 
+@import url("./variables.css");
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", serif;
+  background-color: var(--bg-primary);
 }
 
+/* HEADER  */
+.header {
+  height: 12vh;
+  padding: 0 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-header);
+  border-bottom: 1px solid var(--lightgray);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #9ca3af;
+}
+
+.search-bar img {
+  padding: 5px 5px 10px 5px;
+}
+
+.search-bar input {
+  width: 300px;
+  padding: 5px 5px 10px 5px;
+  border-radius: 4px;
+  border: none;
+  background: transparent;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar .nav-link {
+  list-style: none;
+  display: inline-block;
+  position: relative;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background: var(--header-text);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
+}
+
+.navbar .nav-link:last-child::after {
+  background: var(--header-text-light);
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link a {
+  color: var(--header-text-light);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.nav-link .basket {
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.basket .basket-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+/* HEADER - END */
+/* ==================================================================> */
+/* HERO SECTION  */
+
 .hero-section {
-  padding-top: 80px;
   display: grid;
   place-items: center;
   grid-template-columns: 1.5fr 1fr;
@@ -24,15 +120,15 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  background-color: #1c2333;
+  background-color: var(--bg-secondary);
 }
 
 .hero-content .hero-action {
   width: 60%;
   height: 60%;
   padding: 20px 40px;
-  background-color: #1c2333;
-  color: #fff;
+  background-color: var(--bg-secondary);
+  color: var(--white);
 }
 
 .hero-action h1 {
@@ -68,7 +164,7 @@ body {
   width: 3rem;
   height: 3rem;
   background: transparent;
-  border: 1px solid #fff;
+  border: 1px solid var(--white);
   border-radius: 1.625rem;
 }
 
@@ -78,7 +174,7 @@ body {
   top: 0;
   bottom: 0;
   margin: auto;
-  background: #fff;
+  background: var(--white);
 }
 
 .hero-btn.learn-more .circle .icon.arrow {
@@ -96,8 +192,8 @@ body {
   right: 0.0625rem;
   width: 0.625rem;
   height: 0.625rem;
-  border-top: 0.125rem solid #fff;
-  border-right: 0.125rem solid #fff;
+  border-top: 0.125rem solid var(--white);
+  border-right: 0.125rem solid var(--white);
   transform: rotate(45deg);
 }
 
@@ -109,7 +205,7 @@ body {
   bottom: 0;
   padding: 0.75rem 0;
   margin: 0 0 0 1.85rem;
-  color: #fff;
+  color: var(--white);
   font-weight: 700;
   line-height: 1.7;
   text-align: center;
@@ -135,7 +231,7 @@ body {
   display: grid;
   place-items: center;
   grid-column: 2;
-  background-color: #f7c59f;
+  background-color: var(--bg-orange);
   z-index: 1;
 }
 
@@ -143,7 +239,8 @@ body {
   display: flex;
   align-items: center;
   position: absolute;
-  top: 20px;
+  top: 25px;
+  height: 97%;
   z-index: 11;
 }
 
@@ -152,6 +249,9 @@ body {
   height: 350px;
   position: absolute;
   z-index: 11;
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 50%;
 }
+
+/* HERO SECTION - END */
+/* ==================================================================> */
