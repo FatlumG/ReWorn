@@ -1,0 +1,17 @@
+:root {
+  /* CASUAL */
+  --white: #fff;
+  --black: #000;
+  --lightgray: #ddd;
+
+  /*BACKGROUNDS*/
+  --bg-primary: #fafafa;
+  --bg-secondary: #1c2333;
+  --bg-header: #f8f8f8;
+  --bg-orange: #f7c59f;
+
+  /*FONT COLORS*/
+  --text-primary: #1c2333;
+  --header-text: #374151;
+  --header-text-light: #6b7280;
+}
