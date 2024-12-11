@@ -17,7 +17,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--bg-header);
+  background-color: var(--bg-light);
   border-bottom: 1px solid var(--lightgray);
 }
 
@@ -258,8 +258,9 @@ body {
 /* CLOTHES SECTION  */
 
 .product-container {
+  height: 100vh;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
 }
 
 .product-container h2 {
@@ -270,6 +271,7 @@ body {
   color: var(--text-secondary);
   font-size: 1.8rem;
   font-weight: 700;
+  margin-bottom: 80px;
 }
 
 .product-container h2:after {
@@ -331,3 +333,328 @@ body {
 
 /* CLOTHES SECTION - END */
 /* ==================================================================> */
+/*THIS SEASON SECTION */
+
+.promo-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.promo-section h2 {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.promo-section h2:after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  width: 50%;
+  height: 5px;
+  background-color: var(--text-secondary);
+  border-radius: 20px;
+  transform: translateX(-50%);
+}
+
+.promo-text h1 .blue {
+  color: #232d81;
+}
+
+.promo-text h1 .red {
+  color: #ec4b58;
+}
+
+.promo-button {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 20px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #002855;
+  background-color: #fff;
+  border: none;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.promo-button:hover {
+  background-color: #e63946;
+  color: #fff;
+  cursor: pointer;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.button {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.promo-container {
+  position: relative;
+  width: 80%;
+  height: 500px;
+  background: url(../assets/images/summerS.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.promo-text {
+  position: absolute;
+  top: 60%;
+  left: 3%;
+  transform: translate(0, -50%);
+  color: #fff;
+}
+
+.promo-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 60px;
+  font-size: 13px;
+  color: #e63946;
+  background-color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.promo-button:hover {
+  background-color: #ee3838;
+  color: #fff;
+  border-color: #ffffff;
+}
+
+.promo-text h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 19.45px;
+  height: 37.51px;
+  top: 296.64px;
+  left: 400px;
+  gap: 6.25px;
+  opacity: 0px;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 15px;
+}
+
+.time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.time-number {
+  font-size: 5px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.time-label {
+  font-size: 10px;
+  color: #ffffff;
+}
+
+.separator {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/*THIS SEASON SECTION - END */
+/* ==================================================================> */
+/* FOOTER SECTION */
+
+.footer {
+  margin-top: 100px;
+  background-color: var(--bg-light);
+  height: 400px;
+  padding: 20px 50px;
+}
+
+.footer .infos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.infos .left-side {
+  width: 50%;
+}
+
+.left-side .info-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.info-container .info {
+  line-height: 26px;
+}
+
+.info h3 {
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info ul li a {
+  text-decoration: none;
+  color: var(--text-secondary-light);
+}
+.infos .input-social {
+  width: 40%;
+}
+
+.infos .platforms-social {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.platforms-social .social-links ul,
+.platforms-social .platforms ul {
+  display: flex;
+  gap: 10px;
+}
+
+.social-links ul img,
+.platforms ul img {
+  width: 30px;
+}
+
+.info form {
+  width: 100%;
+}
+
+.info form h4 {
+  color: var(--text-primary);
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.info form input {
+  width: 69%;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.info form button {
+  width: 25%;
+  height: 43px;
+  background-color: var(--bg-secondary);
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.info form p {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--text-secondary-light);
+}
+
+.info form p a {
+  color: var(--blue);
+}
+
+.info .payments {
+  width: 100%;
+}
+
+.payments .payment-icons img {
+  width: 55px;
+}
+
+.all-rights {
+  display: flex;
+  flex-direction: column;
+}
+
+.all-rights p {
+  color: var(--text-secondary-light);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.all-rights .rights {
+  width: 70%;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.rights a {
+  color: var(--text-secondary-light);
+  letter-spacing: 1px;
+}
+
+/* FOOTER SECTION - END */

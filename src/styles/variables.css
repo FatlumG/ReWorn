@@ -2,12 +2,13 @@
   /* CASUAL */
   --white: #fff;
   --black: #000;
+  --blue:#0F4FCE;
   --lightgray: #ddd;
 
   /*BACKGROUNDS*/
   --bg-primary: #fafafa;
   --bg-secondary: #1c2333;
-  --bg-header: #f8f8f8;
+  --bg-light: #f8f8f8;
   --bg-orange: #f7c59f;
 
   /*FONT COLORS*/
