@@ -369,12 +369,12 @@ body {
   transform: translateX(-50%);
 }
 
-.promo-text h1 .blue {
-  color: #232d81;
+.promo-text h1 {
+  color: #fff;
 }
 
 .promo-text h1 .red {
-  color: #ec4b58;
+  color: #000;
 }
 
 .promo-button {
@@ -437,7 +437,7 @@ body {
   position: relative;
   width: 80%;
   height: 500px;
-  background: url(../assets/images/summerS.png);
+  background: url(../assets/images/winterC.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -446,7 +446,7 @@ body {
 
 .promo-text {
   position: absolute;
-  top: 60%;
+  top: 70%;
   left: 3%;
   transform: translate(0, -50%);
   color: #fff;
@@ -492,6 +492,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   font-size: 15px;
+  color: #000;
 }
 
 .time-block {
@@ -504,18 +505,15 @@ body {
 .time-number {
   font-size: 5px;
   font-weight: bold;
-  color: #ffffff;
 }
 
 .time-label {
   font-size: 10px;
-  color: #ffffff;
 }
 
 .separator {
   font-size: 15px;
   font-weight: bold;
-  color: #ffffff;
 }
 
 /*THIS SEASON SECTION - END */
@@ -526,7 +524,7 @@ body {
   margin-top: 100px;
   background-color: var(--bg-light);
   height: 400px;
-  padding: 20px 50px;
+  padding: 20px 70px;
 }
 
 .footer .infos {
@@ -585,25 +583,25 @@ body {
   width: 30px;
 }
 
-.info form {
+.email-donate form {
   width: 100%;
 }
 
-.info form h4 {
+.email-donate form h4 {
   color: var(--text-primary);
   text-transform: uppercase;
   font-weight: 400;
   margin: 10px 0;
 }
 
-.info form input {
+.email-donate form input {
   width: 69%;
   height: 40px;
   padding: 0 10px;
   font-size: 14px;
 }
 
-.info form button {
+.email-donate form button {
   width: 25%;
   height: 43px;
   background-color: var(--bg-secondary);
@@ -614,14 +612,14 @@ body {
   cursor: pointer;
 }
 
-.info form p {
+.email-donate form p {
   font-size: 13px;
   font-weight: 600;
   white-space: nowrap;
   color: var(--text-secondary-light);
 }
 
-.info form p a {
+.email-donate form p a {
   color: var(--blue);
 }
 
@@ -644,17 +642,9 @@ body {
   font-size: 14px;
 }
 
-.all-rights .rights {
-  width: 70%;
-  white-space: nowrap;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+.all-rights {
+  margin-top: 50px;
+  text-align: center;
+  color: var(--text-secondary);
 }
-
-.rights a {
-  color: var(--text-secondary-light);
-  letter-spacing: 1px;
-}
-
 /* FOOTER SECTION - END */
