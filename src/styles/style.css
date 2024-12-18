@@ -262,19 +262,34 @@ body {
   height: auto;
   padding: 50px 20px;
   margin: auto;
-}
-
-.weekHighlights h3 {
   text-align: center;
-  color: #374151;
-  font-size: 26px;
-  width: fit-content;
-  border-bottom: #374151 solid;
-  border-bottom: calc(30%);
-  margin: 50px auto;
 }
 
 .weekHighlights h2 {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 80px;
+}
+
+.weekHighlights h2:after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  width: 50%;
+  height: 5px;
+  background-color: var(--text-secondary);
+  border-radius: 20px;
+  transform: translateX(-50%);
+}
+
+.weekHighlights h3 {
   color: #fff;
   text-align: center;
   font-size: 48px;
@@ -351,10 +366,10 @@ body {
   height: 500px;
 }
 
-#largeCardReverse h2,
-#smallCardReverse h2,
-#largeCard h2,
-#smallCard h2 {
+#largeCardReverse h3,
+#smallCardReverse h3,
+#largeCard h3,
+#smallCard h3 {
   margin-bottom: 220px;
 }
 
@@ -439,7 +454,7 @@ body {
   width: 100%;
 }
 
-/* HIGHLIGHTS SECTION - END */
+/* HIGHLIGHTS SECTION - END*/
 /* ==================================================================> */
 /* CLOTHES SECTION  */
 
