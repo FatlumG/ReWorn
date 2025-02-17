@@ -231,7 +231,7 @@ body {
   display: grid;
   place-items: center;
   grid-column: 2;
-  background-color: var(--bg-orange);
+  background-color: var(--dusky-green);
   z-index: 1;
 }
 
