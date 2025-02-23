@@ -168,7 +168,6 @@ body {
 }
 
 .hero-btn.learn-more .circle {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: relative;
   display: block;
   width: 3rem;
@@ -176,15 +175,16 @@ body {
   background: transparent;
   border: 1px solid var(--white);
   border-radius: 1.625rem;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 }
 
 .hero-btn.learn-more .circle .icon {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
   top: 0;
   bottom: 0;
   margin: auto;
   background: var(--white);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 }
 
 .hero-btn.learn-more .circle .icon.arrow {
