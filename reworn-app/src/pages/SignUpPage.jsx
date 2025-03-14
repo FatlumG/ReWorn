@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import InputField from "../components/InputField";
-import Button from "../components/Button";
 import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
+import InputField from "../components/InputField";
+import Button from "../components/Button";
+import kids from "../assets/images/kids.png";
 function SignUpPage() {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -96,7 +97,13 @@ function SignUpPage() {
           />
         </form>
       </div>
-      <div className="w-[30%] bg-blue"></div>
+      <div className="w-[30%] bg-blue relative">
+        <img
+          src={kids}
+          alt="Kids"
+          className="absolute top-1/2 left-1/2 transform -translate-x-full -translate-y-1/2"
+        />
+      </div>
     </div>
   );
 }
