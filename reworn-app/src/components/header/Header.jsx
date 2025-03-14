@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 
 function Header() {
   return (
-    <header className="header h-[13vh] flex justify-between items-center border-b-2 border-gray px-24">
+    <header className="relative h-[13vh] flex justify-between items-center px-24 shadow-lg z-50">
       <div className="text text-2xl font-bold">ReWorn</div>
       <div className="search-bar flex items-center border-b-2 border-gray">
         <img src={search} alt="Search Icon" className="p-2 pe-4" />

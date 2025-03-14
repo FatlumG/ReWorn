@@ -5,7 +5,7 @@ import navyBlue from "../../assets/images/navyBlue.png";
 
 function Hero() {
   return (
-    <section className="grid grid-cols-7 h-[59vh] place-items-center">
+    <section className="grid grid-cols-7 h-[87vh] place-items-center">
       <div className="hero-content col-span-4 w-full h-full flex flex-col justify-center items-start px-10 bg-bg-secondary">
         <div className="hero-action w-[70%] py-[20px] px-[40px] text-white">
           <h1 className="text-[3.3rem] font-bold leading-[60px]">
