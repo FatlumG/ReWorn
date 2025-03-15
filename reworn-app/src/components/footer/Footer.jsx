@@ -6,15 +6,15 @@ import tiktok from "../../assets/icons/tiktok.svg";
 
 function Footer() {
   return (
-    <footer className="px-24 pt-16 pb-5 mt-52 bg-bg-primary">
-      <div className="flex justify-between">
-        <div>
-          <h2 className="text-xl font-bold">Kushtet & Politikat</h2>
+    <footer className="px-10 sm:px-24 sm:px-30 lg:px-10 xl:px-20 pt-12 pb-5 mt-28 bg-bg-primary font-poppins">
+      <div className="w-full grid grid-cols-5 lg:flex gap-10 lg:justify-between">
+        <div className="col-span-5 sm:col-span-3">
+          <h2 className="text-xl font-bold">KUSHTET & POLITIKAT</h2>
           <ul>
             <li className="mt-1 text-gray cursor-pointer">
               <a>Qendra e Privatësisë</a>
             </li>
-            <li className="text-gray cursor-pointer">
+            <li className="text-gray cursor-pointer whitespace-nowrap lg:whitespace-normal">
               <a>Politika e Privatësisë dhe Cookies</a>
             </li>
             <li className="text-gray cursor-pointer">
@@ -23,7 +23,7 @@ function Footer() {
             <li className="text-gray cursor-pointer">
               <a>Kushtet dhe Rregullat</a>
             </li>
-            <li className="text-gray cursor-pointer">
+            <li className="text-gray cursor-pointer whitespace-nowrap">
               <a>Njoftimi i të Drejtave të Autorit</a>
             </li>
             <li className="text-gray cursor-pointer">
@@ -32,10 +32,10 @@ function Footer() {
           </ul>
         </div>
 
-        <div>
+        <div className="col-span-5 sm:col-span-2">
           <h2 className="text-xl font-bold">RRETH NESH</h2>
           <ul>
-            <li className="mt-1 text-gray cursor-pointer">
+            <li className="mt-1 text-gray cursor-pointer whitespace-nowrap">
               <a>Rreth ReWorn</a>
             </li>
             <li className="text-gray cursor-pointer">
@@ -47,17 +47,17 @@ function Footer() {
           </ul>
         </div>
 
-        <div>
+        <div className="col-span-5 sm:col-span-3">
           <h2 className="text-xl font-bold">MARRJET & DONATIMET</h2>
           <ul>
-            <li className="mt-1 text-gray cursor-pointer">
-              <a>Informacion mbi marrjen</a>
+            <li className="mt-1 text-gray cursor-pointer whitespace-nowrap lg:whitespace-normal">
+              <a>Informacion mbi marrjen e veshbathjes</a>
             </li>
             <li className="text-gray cursor-pointer">
               <a>Kthimet</a>
             </li>
-            <li className="text-gray cursor-pointer">
-              <a>Si të merrni</a>
+            <li className="text-gray cursor-pointer whitespace-nowrap">
+              <a>Si të merrni veshmbathje</a>
             </li>
             <li className="text-gray cursor-pointer">
               <a>Tabela e madhësive</a>
@@ -65,7 +65,7 @@ function Footer() {
           </ul>
         </div>
 
-        <div>
+        <div className="col-span-5 sm:col-span-2">
           <h2 className="text-xl font-bold">PËRKUJDESJA NDAJ KLIENTIT</h2>
           <ul>
             <li className="mt-1 text-gray cursor-pointer">
@@ -83,7 +83,7 @@ function Footer() {
           </ul>
         </div>
 
-        <div>
+        <div className="col-span-5 sm:col-span-5">
           <h2 className="text-xl font-bold">Rrjetet Sociale</h2>
           <ul>
             <li className="mt-2 cursor-pointer">

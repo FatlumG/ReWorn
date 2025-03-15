@@ -7,13 +7,13 @@ export default {
       "bg-secondary": "#1c2333",
       "bg-light": "#f8f8f8",
 
-      "text-primary": "#1c2333",
-      "text-secondary": "#374151",
-      "text-secondary-light": "#6b7280",
-      "text-navy": "#263A43",
+      "primary": "#1c2333",
+      "secondary": "#374151",
+      "secondary-light": "#6b7280",
+      "navy": "#263A43",
 
       "white": "#fff",
-      "green": "#21fa83",
+      "light-blue": "#8ecae6 ",
       "blue": "#0A2FB6",
       "gray": "#8E8E8E",
       // "dusky-green": "#06aa5e",
