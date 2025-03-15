@@ -11,7 +11,7 @@ function Navbar() {
       <ul
         className={`absolute flex flex-col bg-bg-primary w-full h-[100vh] ${
           open ? "top-0 left-0 opacity-100" : "top-0 left-full opacity-50"
-        } justify-center lg:flex-row lg:static lg:bg-transparent lg:opacity-100 lg:w-auto lg:h-auto items-center gap-3 font-poppins transition-all duration-500`}
+        } justify-center text-primary lg:flex-row lg:static lg:bg-transparent lg:opacity-100 lg:w-auto lg:h-auto items-center gap-3 font-poppins transition-all duration-500`}
       >
         <li className="cursor-pointer">
           <FaXmark
