@@ -11,13 +11,12 @@ function SignUpPage() {
     setShowPassword(!showPassword);
   };
   return (
-    <div className="flex h-[100vh]">
-      <div className="w-[70%] max-w-md mx-auto mt-24 ms-44">
-        <h2 className="text-[2.5rem] font-bold mb-3">Regjistrohu në Reworn</h2>
-        <p className="text-light-grey font-thin">
-          Regjistrohu dhe merr rroba falas!
-        </p>
-        <form className="flex flex-col gap-5 mt-10">
+    <div className="flex justify-center h-[100vh]">
+      <div className="w-full flex flex-col items-center p-10 lg:w-[70%] lg:items-start lg:p-20 ">
+        <h2 className="text-[2.5rem] font-bold mb-3 whitespace-nowrap">
+          Kyçu në Reworn
+        </h2>
+        <form className="flex flex-col gap-10 mt-10 w-full sm:w-[450px]">
           <InputField
             parentClass="flex flex-col gap-2"
             htmlFor="username"
@@ -40,7 +39,7 @@ function SignUpPage() {
             value="email"
             placeholder="Email-i juaj"
           />
-          <div className="flex gap-5 mb-2">
+          <div className="flex flex-col sm:flex-row gap-5 mb-2">
             <InputField
               parentClass="flex flex-col gap-2"
               htmlFor="password"
@@ -97,7 +96,7 @@ function SignUpPage() {
           />
         </form>
       </div>
-      <div className="w-[30%] bg-blue relative">
+      <div className="hidden lg:block w-[30%] bg-blue relative">
         <img
           src={kids}
           alt="Kids"

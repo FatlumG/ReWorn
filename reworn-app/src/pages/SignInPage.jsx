@@ -11,11 +11,13 @@ function SignInPage() {
     setShowPassword(!showPassword);
   };
   return (
-    <div className="flex h-[100vh]">
-      <div className="w-[70%] max-w-md mx-auto mt-24 ms-44">
-        <h2 className="text-[2.5rem] font-bold mb-3">Kyçu në Reworn</h2>
+    <div className="flex justify-center h-[100vh]">
+      <div className="w-full flex flex-col items-center p-10 lg:w-[70%] lg:items-start lg:p-20 ">
+        <h2 className="text-[2.5rem] font-bold mb-3 whitespace-nowrap">
+          Kyçu në Reworn
+        </h2>
         <p className="text-light-grey font-thin">Kyçu dhe merr rroba falas!</p>
-        <form className="flex flex-col gap-10 mt-10">
+        <form className="flex flex-col gap-10 mt-10 w-full sm:w-[450px]">
           <InputField
             parentClass="flex flex-col gap-2"
             htmlFor="email"
@@ -61,7 +63,7 @@ function SignInPage() {
           />
         </form>
       </div>
-      <div className="w-[30%] bg-blue relative">
+      <div className="hidden lg:block w-[30%] bg-blue relative">
         <img
           src={kids}
           alt="Kids"
