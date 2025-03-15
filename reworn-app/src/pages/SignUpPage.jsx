@@ -12,7 +12,7 @@ function SignUpPage() {
   };
   return (
     <div className="flex justify-center h-[100vh]">
-      <div className="w-full flex flex-col items-center p-10 lg:w-[70%] lg:items-start lg:p-20 ">
+      <div className="w-full flex flex-col items-center p-10 lg:w-[70%] lg:items-start lg:p-14 lg:ps-28 ">
         <h2 className="text-[2.5rem] font-bold mb-3 whitespace-nowrap">
           Kyçu në Reworn
         </h2>
