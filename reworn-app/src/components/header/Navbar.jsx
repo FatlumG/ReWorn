@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import basket from "../../assets/icons/basket.svg";
 import { FaBars } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
+import { Link as ScrollLink } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 function Navbar() {
   const [open, setOpen] = useState(false);
   const toggle = () => setOpen(!open);
@@ -19,20 +20,23 @@ function Navbar() {
             onClick={toggle}
           />
         </li>
-        <li className="list-none inline-block relative p-3 transition-all duration-150 hover:translate-y-[-3px]">
-          <a href="#">Rrobat</a>
+        <li className="list-none inline-block relative p-3 transition-all duration-150 cursor-pointer hover:translate-y-[-3px]">
+          <ScrollLink to="highlights" smooth={true} duration={500}>
+            Rrobat
+          </ScrollLink>
         </li>
-        <li className="list-none inline-block relative p-3 transition-all duration-150 hover:translate-y-[-3px]">
-          <a href="#">Llogaria</a>
+        <li className="list-none inline-block relative p-3 whitespace-nowrap transition-all duration-150 cursor-pointer hover:translate-y-[-3px]">
+          <ScrollLink to="latest" smooth={true} duration={500}>
+            Të fundit
+          </ScrollLink>
         </li>
-        <li className="list-none inline-block relative p-3 whitespace-nowrap transition-all duration-150 hover:translate-y-[-3px]">
-          <a href="#">Lista e dëshirave</a>
+        <li className="list-none inline-block relative p-3 whitespace-nowrap transition-all duration-150 cursor-pointer hover:translate-y-[-3px]">
+          <RouterLink to="/clothes">Të gjitha</RouterLink>
         </li>
-        <li className="list-none inline-block relative p-3 transition-all duration-150 hover:translate-y-[-3px]">
-          <a href="#" className="flex gap-3">
-            <span>Shporta</span>
-            <img src={basket} className="basket-icon" alt="Basket Icon" />
-          </a>
+        <li className="list-none inline-block relative p-3 transition-all duration-150 cursor-pointer hover:translate-y-[-3px]">
+          <ScrollLink to="footer" smooth={true} duration={1000}>
+            Kontakti
+          </ScrollLink>
         </li>
       </ul>
       <FaBars className="cursor-pointer lg:hidden" onClick={toggle} />

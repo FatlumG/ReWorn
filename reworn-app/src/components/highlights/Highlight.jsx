@@ -7,7 +7,7 @@ import exquisite from "../../assets/images/exquisite.png";
 import newArrivals from "../../assets/images/newArrivals.png";
 function Highlight() {
   return (
-    <section className="block mt=[400px]">
+    <section id="highlights" className="block mt=[400px]">
       <SectionTitle title="Rrobat e fundit" />
       <div className="grid grid-cols-3 grid-rows-2 px-5 gap-2 max-w-[500px] sm:max-w-[80vw] md:max-w-[70vw] lg:max-w-[60vw] h-auto mx-auto ">
         <Link

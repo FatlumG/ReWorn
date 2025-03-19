@@ -6,7 +6,7 @@ import tiktok from "../../assets/icons/tiktok.svg";
 
 function Footer() {
   return (
-    <footer className="px-10 sm:px-24 sm:px-30 lg:px-10 xl:px-20 pt-12 pb-5 mt-28 bg-bg-primary font-poppins">
+    <footer id="footer" className="px-10 sm:px-24 sm:px-30 lg:px-10 xl:px-20 pt-12 pb-5 mt-28 bg-bg-primary font-poppins">
       <div className="w-full grid grid-cols-5 lg:flex gap-10 lg:justify-between">
         <div className="col-span-5 sm:col-span-3">
           <h2 className="text-xl font-bold">KUSHTET & POLITIKAT</h2>
