@@ -11,6 +11,7 @@ function Input({
   inputType,
   placeholder,
   child,
+  onChange,
 }) {
   return (
     <div className={parentClass}>
@@ -24,6 +25,7 @@ function Input({
           value={input}
           type={inputType}
           placeholder={placeholder}
+          onChange={onChange}
         >
           {input}
         </input>
