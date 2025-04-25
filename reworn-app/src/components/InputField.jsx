@@ -7,7 +7,7 @@ function Input({
   labelClass,
   id,
   inputClass,
-  input,
+  value,
   inputType,
   placeholder,
   child,
@@ -22,12 +22,12 @@ function Input({
         <input
           id={id}
           className={inputClass}
-          value={input}
+          value={value}
           type={inputType}
           placeholder={placeholder}
           onChange={onChange}
         >
-          {input}
+          {/* {value} */}
         </input>
         {child}
       </div>
