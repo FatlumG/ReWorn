@@ -11,7 +11,7 @@ function Highlight() {
       <SectionTitle title="Rrobat e fundit" />
       <div className="grid grid-cols-3 grid-rows-2 px-5 gap-2 max-w-[500px] sm:max-w-[80vw] md:max-w-[70vw] lg:max-w-[60vw] h-auto mx-auto ">
         <Link
-          to="clothes"
+          to="/clothes"
           className="relative col-span-1 w-full h-full transition-all duration-300 hover:brightness-50"
         >
           <img
@@ -24,7 +24,7 @@ function Highlight() {
           </h3>
         </Link>
         <Link
-          to="clothes"
+          to="/clothes"
           className="relative col-span-2 w-full h-full transition-all duration-300 hover:brightness-50"
         >
           <img
@@ -37,7 +37,7 @@ function Highlight() {
           </h3>
         </Link>
         <Link
-          to="clothes"
+          to="/clothes"
           className="relative col-span-2 w-full h-full transition-all duration-300 hover:brightness-50"
         >
           <img
@@ -50,7 +50,7 @@ function Highlight() {
           </h3>
         </Link>
         <Link
-          to="clothes"
+          to="/clothes"
           className="relative col-span-1 w-full h-full transition-all duration-300 hover:brightness-50"
         >
           <img
