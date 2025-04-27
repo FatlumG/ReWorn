@@ -5,12 +5,12 @@ import { useNavigate } from "react-router-dom";
 import InputField from "../components/InputField";
 import Button from "../components/Button";
 import kids from "../assets/images/kids.png";
-import { ToastContainer, toast } from "react-toastify"; // Importing Toastify
-import "react-toastify/dist/ReactToastify.css"; // Importing CSS for Toastify
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 function SignUpPage() {
   const navigate = useNavigate();
-
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     username: "",
@@ -44,13 +44,9 @@ function SignUpPage() {
       newErrors.username = "Emri i përdoruesit është i detyrueshëm!";
     }
 
-    // const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!formData.email) {
       newErrors.email = "Ju lutem shenoni një Email!";
     }
-    // else if (!emailPattern.test(formData.email)) {
-    //   newErrors.email = "Email-i është i pavlefshëm!";
-    // }
 
     if (!formData.password) {
       newErrors.password = "Fjalëkalimi është i detyrueshëm!";
@@ -68,16 +64,35 @@ function SignUpPage() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (validateForm()) {
-      toast.success("Registrimi u realizua me sukses!");
-      setTimeout(() => {
-        navigate("/home");
-      }, 2000);
+      try {
+        const response = await axios.post(
+          "http://localhost/reworn-server/users/register.php",
+          formData,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+
+        if (response.status === 201) {
+          toast.success("Registrimi u realizua me sukses!");
+          setTimeout(() => {
+            navigate("/home");
+          }, 2000);
+        } else {
+          toast.error("Ka ndodhur një gabim gjatë regjistrimit!");
+        }
+      } catch (error) {
+        toast.error("Ka ndodhur një gabim. Provoni përsëri.");
+        console.error("Error during registration:", error);
+      }
     } else {
-      setErrors((prevErrors) => ({ ...prevErrors }));
+      // If form validation fails, show errors
       Object.values(errors).forEach((error) => {
         if (error) {
           toast.error(error);

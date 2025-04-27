@@ -3,13 +3,13 @@ import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import InputField from "../components/InputField";
 import Button from "../components/Button";
 import kids from "../assets/images/kids.png";
-import { ToastContainer, toast } from "react-toastify"; // Importing Toastify
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function SignInPage() {
-  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
@@ -19,6 +19,8 @@ function SignInPage() {
     email: "",
     password: "",
   });
+
+  const navigate = useNavigate();
 
   const togglePassword = () => {
     setShowPassword(!showPassword);
@@ -45,15 +47,29 @@ function SignInPage() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (validateForm()) {
-      toast.success("Kyqja u realizua me sukses!");
-      setTimeout(() => {
-        navigate("/home");
-      }, 2000);
+      try {
+        // Send POST request to login.php
+        const response = await axios.post(
+          "http://localhost/reworn-server/users/login.php",
+          {
+            email: formData.email,
+            password: formData.password,
+          }
+        );
+
+          toast.success("Kyqja u realizua me sukses!"); // Success message
+          setTimeout(() => {
+            navigate("/home"); // Redirect to home page after successful login
+          }, 2000);
+      } catch (error) {
+        toast.error("Ka ndodhur një gabim gjatë lidhjes me serverin!");
+      }
     } else {
+      // If form validation fails, show error messages
       Object.values(errors).forEach((error) => {
         if (error) {
           toast.error(error);
