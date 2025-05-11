@@ -26,9 +26,7 @@ function Input({
           type={inputType}
           placeholder={placeholder}
           onChange={onChange}
-        >
-          {/* {value} */}
-        </input>
+        ></input>
         {child}
       </div>
     </div>
