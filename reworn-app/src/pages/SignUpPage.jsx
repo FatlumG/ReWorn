@@ -13,6 +13,8 @@ function SignUpPage() {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
     username: "",
     email: "",
     password: "",
@@ -20,6 +22,8 @@ function SignUpPage() {
   });
 
   const [errors, setErrors] = useState({
+    firstName: "",
+    lastName: "",
     username: "",
     email: "",
     password: "",
@@ -39,6 +43,14 @@ function SignUpPage() {
 
   const validateForm = () => {
     const newErrors = {};
+
+    if (!formData.firstName) {
+      newErrors.firstName = "Emri i përdoruesit është i detyrueshëm!";
+    }
+
+    if (!formData.lastName) {
+      newErrors.lastName = "Mbiemri i përdoruesit është i detyrueshëm!";
+    }
 
     if (!formData.username) {
       newErrors.username = "Emri i përdoruesit është i detyrueshëm!";
@@ -69,30 +81,33 @@ function SignUpPage() {
 
     if (validateForm()) {
       try {
-        const response = await axios.post(
-          "http://localhost/reworn-server/users/register.php",
-          formData,
-          {
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
+        // const payload = {
+        //   first_name: formData.firstName,
+        //   last_name: formData.lastName,
+        //   username: formData.username,
+        //   email: formData.email,
+        //   password: formData.password,
+        // };
 
-        if (response.status === 201) {
-          toast.success("Registrimi u realizua me sukses!");
-          setTimeout(() => {
-            navigate("/home");
-          }, 2000);
-        } else {
-          toast.error("Ka ndodhur një gabim gjatë regjistrimit!");
-        }
+        // console.log(payload);
+        // const response = await axios.post(
+        //   "http://localhost/reworn-server/users/register.php",
+        //   payload,
+        //   {
+        //     headers: {
+        //       "Content-Type": "application/json",
+        //     },
+        //   }
+        // );
+
+        toast.success("Registrimi u realizua me sukses!");
+        setTimeout(() => {
+          navigate("/home");
+        }, 2000);
       } catch (error) {
         toast.error("Ka ndodhur një gabim. Provoni përsëri.");
-        console.error("Error during registration:", error);
       }
     } else {
-      // If form validation fails, show errors
       Object.values(errors).forEach((error) => {
         if (error) {
           toast.error(error);
@@ -107,49 +122,83 @@ function SignUpPage() {
           Kyçu në Reworn
         </h2>
         <form
-          className="flex flex-col gap-2 mt-10 w-full sm:w-[450px]"
+          className="flex flex-col gap-2 mt-5 w-full sm:w-[450px]"
           onSubmit={handleSubmit}
         >
-          <InputField
-            parentClass="flex flex-col gap-2"
-            htmlFor="username"
-            label="Sheno emrin e perdoruesit"
-            labelClass="block text-lg font-medium text-gray-700"
-            type="text"
-            id="username"
-            name="username"
-            inputClass="flex border-2 border-gray h-16 w-full p-4 rounded-md text-lg"
-            value={formData.username}
-            placeholder="Emri i përdoruesit"
-            onChange={(e) =>
-              setFormData({ ...formData, username: e.target.value })
-            }
-          />
-          <InputField
-            parentClass="flex flex-col gap-2 mt-5"
-            htmlFor="email"
-            label="Sheno email-in"
-            labelClass="block text-lg font-medium text-gray-700"
-            type="email"
-            id="email"
-            name="email"
-            inputClass="flex border-2 border-gray h-16 w-full p-4 rounded-md text-lg"
-            value={formData.email}
-            placeholder="Email-i juaj"
-            onChange={(e) =>
-              setFormData({ ...formData, email: e.target.value })
-            }
-          />
           <div className="flex flex-col sm:flex-row gap-5 mb-2">
             <InputField
-              parentClass="flex flex-col gap-2 mt-5"
+              parentClass="flex flex-col gap-2 mt-3"
+              htmlFor="firstName"
+              label="Emri"
+              labelClass="block text-lg font-medium text-navy"
+              id="firstName"
+              name="firstName"
+              inputType="text"
+              inputClass="flex border-2 border-gray h-[55px] w-full p-4 rounded-md text-lg"
+              value={formData.firstName}
+              placeholder="Emri juaj"
+              onChange={(e) =>
+                setFormData({ ...formData, firstName: e.target.value })
+              }
+            />
+            <InputField
+              parentClass="flex flex-col gap-2 mt-3"
+              htmlFor="lastName"
+              label="Mbiemri"
+              labelClass="block text-lg font-medium text-navy"
+              id="lastName"
+              name="lastName"
+              inputType="text"
+              inputClass="flex border-2 border-gray h-[55px] w-full p-4 rounded-md text-lg"
+              value={formData.lastName}
+              placeholder="Mbiemri juaj"
+              onChange={(e) =>
+                setFormData({ ...formData, lastName: e.target.value })
+              }
+            />
+          </div>
+          <div className="flex flex-col sm:flex-row gap-5 mb-2">
+            <InputField
+              parentClass="flex flex-col gap-2 mt-3"
+              htmlFor="username"
+              label="Sheno emrin e perdoruesit"
+              labelClass="block text-lg font-medium text-gray-700"
+              type="text"
+              id="username"
+              name="username"
+              inputClass="flex border-2 border-gray h-[55px] w-full p-4 rounded-md text-lg"
+              value={formData.username}
+              placeholder="Emri i përdoruesit"
+              onChange={(e) =>
+                setFormData({ ...formData, username: e.target.value })
+              }
+            />
+            <InputField
+              parentClass="flex flex-col gap-2 mt-3"
+              htmlFor="email"
+              label="Sheno email-in"
+              labelClass="block text-lg font-medium text-gray-700"
+              type="email"
+              id="email"
+              name="email"
+              inputClass="flex border-2 border-gray h-[55px] w-full p-4 rounded-md text-lg"
+              value={formData.email}
+              placeholder="Email-i juaj"
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
+            />
+          </div>
+          <div className="flex flex-col sm:flex-row gap-5 mb-2">
+            <InputField
+              parentClass="flex flex-col gap-2 mt-3"
               htmlFor="password"
               label="Krijo fjalëkalimin"
               labelClass="block text-lg font-medium text-navy"
               id="password"
               name="password"
               inputType={!showPassword ? "password" : "text"}
-              inputClass="flex border-2 border-gray h-16 w-full p-4 rounded-md text-lg"
+              inputClass="flex border-2 border-gray h-[55px] w-full p-4 rounded-md text-lg"
               value={formData.password}
               placeholder="Fjalëkalimi juaj"
               onChange={(e) =>
@@ -171,14 +220,14 @@ function SignUpPage() {
             />
 
             <InputField
-              parentClass="flex flex-col gap-2 mt-5"
+              parentClass="flex flex-col gap-2 mt-3"
               htmlFor="passwordConfirm"
               label="Konfirmo fjalëkalimin"
               labelClass="block text-lg font-medium text-navy"
               id="passwordConfirm"
               name="passwordConfirm"
               inputType={!showPassword ? "password" : "text"}
-              inputClass="flex border-2 border-gray h-16 w-full p-4 rounded-md text-lg"
+              inputClass="flex border-2 border-gray h-[55px] w-full p-4 rounded-md text-lg"
               value={formData.passwordConfirm}
               placeholder="Fjalëkalimi juaj"
               onChange={(e) =>
@@ -202,7 +251,7 @@ function SignUpPage() {
 
           <Button
             type="submit"
-            className="bg-black text-white h-16 text-lg font-semibold rounded-md bg-blue mt-5"
+            className="bg-black text-white h-12 text-lg font-semibold rounded-md bg-blue mt-5"
             children="Kyqu"
           />
           <p className="text-gray">
